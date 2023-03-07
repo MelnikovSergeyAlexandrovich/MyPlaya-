@@ -1,0 +1,60 @@
+﻿<Window x:Class="playersclubb_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:playersclubb_"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="DirectoryPickerButton" Content="Выбор папки с музыкой" Grid.ColumnSpan="7" Click="DirectoryPickerButton_Click" Margin="10,0,10,0" VerticalAlignment="Center"/>
+        <ListBox x:Name="MediaFilesBox" Grid.ColumnSpan="7" SelectionChanged="MediaFilesBox_SelectionChanged" Margin="0,30,0,50" Grid.RowSpan="3"/>
+        <Slider x:Name="AudioSlider"  Grid.Row="2" Grid.ColumnSpan="7" Width="750" HorizontalAlignment="Left"  VerticalAlignment="Top" ValueChanged="Slider_ValueChanged" Margin="25,0,0,0"/>
+        <Slider x:Name="SoundSlider" Grid.Row="3" Grid.Column="6" VerticalAlignment="Top" Width="300" HorizontalAlignment="Center" Margin="0,25,0,0" ValueChanged="SoundSlider_ValueChanged"/>
+        <Button x:Name="BackButton"  Grid.Row="3" Grid.Column="0" Margin="7,7,7,7" Click="BackButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\User\Downloads\c37266f891444b10aa9c22ed163b99c7.png" Stretch="Uniform" Width="71"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="PlayOrStopButton"  Grid.Row="3" Grid.Column="1" Margin="7,7,7,7" Click="PlayOrStopButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\User\Downloads\580b57fcd9996e24bc43c4f5.png" Stretch="Uniform" Width="78"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="NextButton"  Grid.Row="3" Grid.Column="2" Margin="7,7,7,7" Click="NextButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\User\Downloads\pngtree-cartoon-arrow-icon-download-image_1256943.jpg" Stretch="Uniform"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="AgainButton"  Grid.Row="3" Grid.Column="3" Margin="7,7,7,7" Click="AgainButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\User\Downloads\img_283299.png" Stretch="Uniform" Width="71"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="MixButton" Grid.Row="3" Grid.Column="4" Margin="7,7,7,7" Click="MixButton_Click" Grid.ColumnSpan="1" >
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\User\Downloads\165-1656116_complessità-medium-mix-arrows-icon.png" Stretch="Uniform" Width="71"/>
+            </StackPanel>
+        </Button>
+        <TextBlock  Text="Звук" Grid.Row="3" Grid.Column="6" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,46,0,0" Width="100" FontSize="15" TextAlignment="Center"/>
+        <MediaElement x:Name="CurrentMusic" LoadedBehavior="Manual" MediaOpened="CurrentMusic_MediaOpened"/>
+        <TextBlock x:Name="PassedTime" Grid.Row="2" VerticalAlignment="Bottom" Grid.ColumnSpan="3"  Margin="30 0 70 10" />
+        <TextBlock x:Name="LeftTime" Grid.Row="2" Grid.Column="6"  VerticalAlignment="Bottom"  Margin="100 0 30 10" TextAlignment="Right"/>
+
+    </Grid>
+</Window>
