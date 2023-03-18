@@ -80,10 +80,10 @@ namespace playersclubb_
                 var timeElapsed = CurrentMusic.Position;
                 var TimeFromStart = string.Format("{0:D2}:{1:D2}:{2:D2}", timeElapsed.Hours, timeElapsed.Minutes, timeElapsed.Seconds);
                 PassedTime.Text = TimeFromStart;
-                var TotalTime = new TimeSpan(CurrentMusic.NaturalDuration.TimeSpan.Ticks);
+                /*var TotalTime = new TimeSpan(CurrentMusic.NaturalDuration.TimeSpan.Ticks);
                 TotalTime = TotalTime - timeElapsed;
                 var TotalTimeOut = string.Format("{0:D2}:{1:D2}:{2:D2}", TotalTime.Hours, TotalTime.Minutes, TotalTime.Seconds);
-                LeftTime.Text = TotalTimeOut;
+                LeftTime.Text = TotalTimeOut;*/
             }
 
 
